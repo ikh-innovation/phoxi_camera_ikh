@@ -180,6 +180,10 @@ namespace phoxi_camera {
     RosInterface::triggerImage(phoxi_camera::TriggerImage::Request& req, phoxi_camera::TriggerImage::Response& res) {
         try {
             res.id = RosInterface::triggerImage();
+            ///////////////////////////////////////
+            pho::api::PFrame frame = getPFrame(res.id);
+            publishFrame(frame);
+            ///////////////////////////////////////
             res.success = true;
             res.message = OKRESPONSE;
         } catch (PhoXiInterfaceException& e) {
