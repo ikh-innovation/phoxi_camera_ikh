@@ -1,5 +1,5 @@
 scanner_id: "" # keep "" if scanner id is number
-frame_id: "PhoXi3Dscanner_sensor"
+frame_id: "phoxi_camera_frame"
 latch_topics: false
 topic_queue_size: 1
 init_from_config: false # if true all following parameters will be initialized from this config otherwise from PhoXi control application.
